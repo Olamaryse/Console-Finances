@@ -88,11 +88,18 @@ let finances = [
     ];
     
 
-// console.log("The total number of months is " + finances.length);
+console.log("The total number of months is " + finances.length);
 
-//     for (let i = 0; i < finances.length; i++) {
-// console.log("The total number of months is " + finances[i])
-//      }
+     
+    // Creating variable to store the sum
+    var sum = 0;
+     
+    for (let i = 0; i < finances.length; i++) {
+        sum += finances[i][1];
+    }
+     
+    console.log("The total is " + sum) 
+     
 
 
 
