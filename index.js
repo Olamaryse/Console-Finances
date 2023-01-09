@@ -107,6 +107,7 @@ console.log("The total number of months: " + finances.length);
     
 // Total of the change
  let changeSum = 0;
+ 
     for (let i = 0; i < changes.length; i++) {
         changeSum += changes[i];
     } 
@@ -115,6 +116,7 @@ console.log("The total number of months: " + finances.length);
 
 // Finding the average of the changes
 let average = 0;
+
 for (let i = 0; i < changes.length; i++) {
   average += changes[i][1];
 }
