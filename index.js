@@ -122,6 +122,21 @@ const avg = average / changes.length;
 console.log("Average change = " + avg);
 
 
+// Greatest increase in profit
+let maxProfitIncrease = -Infinity;
+let maxProfitIncreaseMonth = "";
 
+for (let i = 1; i < finances.length; i++) {
+  const [month, profit] = finances[i];
+  const [prevMonth, prevProfit] = finances[i - 1];
+  const profitIncrease = profit - prevProfit;
+  
+  if (profitIncrease > maxProfitIncrease) {
+    maxProfitIncrease = profitIncrease;
+    maxProfitIncreaseMonth = month;
+  }
+}
+
+console.log(`Greatest Increase in Profits: ${maxProfitIncreaseMonth} ${maxProfitIncrease}`);
 
 
