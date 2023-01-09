@@ -91,15 +91,35 @@ let finances = [
 console.log("The total number of months is " + finances.length);
 
      
-    // Creating variable to store the sum
-    var sum = 0;
+// Creating variable to store the sum
+    let sum = 0;
      
     for (let i = 0; i < finances.length; i++) {
         sum += finances[i][1];
-    }
-     
-    console.log("The total is " + sum) 
-     
+    } 
+    console.log("The total = " + sum) 
+    
+// Finding the change
+    let changes = 0;
+    for (let i = 0; i < finances.length - 1; i++) {
+        changes += finances[i][1] - finances[i + 1][1];
+    } 
+    
+// Total of the change
+ let changeSum = 0;
+    for (let i = 0; i < changes.length; i++) {
+        changeSum += changes[i];
+    } 
+    // console.log("The total is " + changeSum) 
+ 
+
+// Finding the average of the changes
+let average = 0;
+for (let i = 0; i < changes.length; i++) {
+  average += changes[i][1];
+}
+const avg = average / changes.length;
+console.log("Average change = " + avg);
 
 
 
