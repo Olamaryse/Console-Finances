@@ -140,3 +140,21 @@ for (let i = 1; i < finances.length; i++) {
 console.log(`Greatest Increase in Profits: ${maxProfitIncreaseMonth} ${maxProfitIncrease}`);
 
 
+// Greatest Decrease in Profits
+let maxProfitDecrease = 0;
+let maxProfitDecreaseMonth = "";
+
+for (let i = 1; i < finances.length; i++) {
+  const [month, profit] = finances[i];
+  const [prevMonth, prevProfit] = finances[i - 1];
+  const profitDecrease = prevProfit - profit;
+  
+  if (profitDecrease > maxProfitDecrease) {
+    maxProfitDecrease = profitDecrease;
+    maxProfitDecreaseMonth = month;
+  }
+}
+
+console.log(`Greatest Decrease in Profits: ${maxProfitDecreaseMonth} ${maxProfitDecrease}`);
+
+
