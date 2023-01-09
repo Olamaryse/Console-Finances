@@ -88,7 +88,7 @@ let finances = [
     ];
     
 
-console.log("The total number of months is " + finances.length);
+console.log("The total number of months: " + finances.length);
 
      
 // Creating variable to store the sum
@@ -97,7 +97,7 @@ console.log("The total number of months is " + finances.length);
     for (let i = 0; i < finances.length; i++) {
         sum += finances[i][1];
     } 
-    console.log("The total = " + sum) 
+    console.log("The total: $" + sum) 
     
 // Finding the change
     let changes = 0;
@@ -111,7 +111,7 @@ console.log("The total number of months is " + finances.length);
         changeSum += changes[i];
     } 
     // console.log("The total is " + changeSum) 
- 
+
 
 // Finding the average of the changes
 let average = 0;
@@ -119,7 +119,7 @@ for (let i = 0; i < changes.length; i++) {
   average += changes[i][1];
 }
 const avg = average / changes.length;
-console.log("Average change = " + avg);
+console.log("Average change: " + avg);
 
 
 // Greatest increase in profit
@@ -137,7 +137,7 @@ for (let i = 1; i < finances.length; i++) {
   }
 }
 
-console.log(`Greatest Increase in Profits: ${maxProfitIncreaseMonth} ${maxProfitIncrease}`);
+console.log(`Greatest Increase in Profits: ${maxProfitIncreaseMonth} $${maxProfitIncrease}`);
 
 
 // Greatest Decrease in Profits
@@ -155,6 +155,6 @@ for (let i = 1; i < finances.length; i++) {
   }
 }
 
-console.log(`Greatest Decrease in Profits: ${maxProfitDecreaseMonth} ${maxProfitDecrease}`);
+console.log(`Greatest Decrease in Profits: ${maxProfitDecreaseMonth} $-${maxProfitDecrease}`);
 
 
